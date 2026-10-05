@@ -1,7 +1,5 @@
 package com.resumeanalyzer.resumeanalyzer.config;
 
-import java.net.URI;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
