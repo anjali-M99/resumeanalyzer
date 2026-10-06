@@ -4,31 +4,31 @@ AI Based Resume Analyzer
 The AI‑Powered Resume Analyzer is a Spring Boot + AI application designed to automatically parse resumes, extract structured information, and provide intelligent insights such as skill matching, experience evaluation, and role suitability. It helps recruiters quickly identify candidates who are most suitable for a given role.
 
 **Features**
-  Resume Upload - Candidates can upload their resumes(pdf/docx) for specific JobIds.
-  Resume Parsing - Extracts text from PDF/DOCX resumes.
-  AI Analysis - Uses AI models to understand whether candidate good fits or not assigning ATS score       and suggestion for recruiters.
-  Resume Analysis - Recruiters can check who the eligible & good fit candidates for the Job.
-  Secure Authentication: JWT‑based login and role management for admin.
-  Database Integration: Stores uploaded resume & metadata, parsed resumes and analysis results.
-  REST APIs: Exposes endpoints for uploading resumes and retrieving analysis.
-  Kafka - Once a resume is uploaded, a Kafka consumer triggers the AI model to generate ATS scores      and suggestions.
+  - Resume Upload - Candidates can upload their resumes(pdf/docx) for specific JobIds.
+  - Resume Parsing - Extracts text from PDF/DOCX resumes.
+  - AI Analysis - Uses AI models to understand whether candidate good fits or not assigning ATS score and suggestion for recruiters.
+  - Resume Analysis - Recruiters can check who the eligible & good fit candidates for the Job.
+  - Secure Authentication: JWT‑based login and role management for admin.
+  - Database Integration: Stores uploaded resume & metadata, parsed resumes and analysis results.
+  - REST APIs: Exposes endpoints for uploading resumes and retrieving analysis.
+  - Kafka - Once a resume is uploaded, a Kafka consumer triggers the AI model to generate ATS scores      and suggestions.
 
  **Tech Stack**
-Backend: Java, Spring Boot, Spring Security, Spring AI
-AI model- google/gemma-3-27b-it
-Database- MySQL
-Authentication - JWT
-Message passing - Kafka
-Build Tool: Maven
+- Backend: Java, Spring Boot, Spring Security, Spring AI
+- AI model: google/gemma-3-27b-it
+- Database: MySQL
+- Authentication: JWT
+- Message passing : Kafka
+- Build Tool: Maven
 
 **Installation & Setup**
-Clone the repo -
-Configure database in application.properties.
-Add 256 Bits SECRET_KEY for JWT-(in JWTHelper)
-Add Access key for Spring AI in application.properties
-Run kafka
-Run maven build
-Start Spring boot application
+* Clone the repo
+* Configure database in application.properties.
+* Add 256 Bits SECRET_KEY for JWT-(in JWTHelper)
+* Add Access key for Spring AI in application.properties
+* Run kafka
+* Run maven build
+* Run as Spring boot application
 
 **API Endpoints**
  1. POST **UploadResume** (path- http://localhost:8080/resume/user/uploadResume)
